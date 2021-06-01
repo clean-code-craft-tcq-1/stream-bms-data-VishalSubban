@@ -32,4 +32,6 @@ jobs:
     - name: build for production
       run: g++ -Iincludes -Wall -Wextra -o production ./src/bms-main.c ./src/bms-sender.c ./src/bms-exec.c 
       
+    - name: run
+      run: ./production
  
