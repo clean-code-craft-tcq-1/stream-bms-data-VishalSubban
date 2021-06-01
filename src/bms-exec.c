@@ -1,7 +1,9 @@
-/************************ INCLUDES **************************/
+/************************ Includes **************************/
 #include "bms-data.h"
 /************************************************************/
 
+
+/************************ Function Definitions **************************/
 void sighandler(int signum) {
     printf("User stopped reading, i.e, Signum value : %d received", signum);
     isStopRequestedByUser = true;

@@ -9,6 +9,8 @@ BatParams_s BatteryData[NumberOfParameters] = {{"Temperature", TEMPERATURE_MIN ,
 getBmsParamVal_funPtr getParamValue[NumberOfParameters] = {getBmsTemperatue , getBmsChargeRate};
 
 
+
+
 void BmsDataSendToConsole()
 {
     float BmsData[NumberOfParameters]; 
