@@ -3,6 +3,11 @@
 #include <stdlib.h>
 #include <stdbool.h>
 #include <signal.h>
+#ifdef _WIN32
+#include <Windows.h>
+#else
+#include <unistd.h>
+#endif
 /************************************************************/
 
 

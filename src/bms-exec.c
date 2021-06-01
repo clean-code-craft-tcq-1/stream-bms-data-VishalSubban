@@ -3,14 +3,14 @@
 /************************************************************/
 
 void sighandler(int signum) {
-    printf("User stopped reading");
-    bool isStopRequestedByUser = true;
+    printf("User stopped reading, i.e, Signum value : %d received", signum);
+    isStopRequestedByUser = true;
 }
 
 float getBmsTemperatue()
 {
     float retval; 
-    retval = (rand() % (TEMP_MAX - TEMP_MIN + 1)) + TEMP_MIN;
+    retval = (rand() % (TEMPERATURE_MAX - TEMPERATURE_MIN + 1)) + TEMPERATURE_MIN;
     return retval ;
 }
 
