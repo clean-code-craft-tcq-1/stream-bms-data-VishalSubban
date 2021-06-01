@@ -30,7 +30,7 @@ jobs:
         retention-days: 1
     
     - name: build for production
-      run: g++ -Iincludes -Wall -Wextra -o production ./*.c 
+      run: g++ -Iincludes -Wall -Wextra -o production ./src/*.c 
       
     - name: run
       run: ./production
