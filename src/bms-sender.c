@@ -3,7 +3,7 @@
 /************************************************************/
 
 
-struct BatteryParameters_s BatteryData[NumberOfParameters] = {{"Temperature", TEMPERATURE_MIN , TEMPERATURE_MAX},
+struct BatParams_s BatteryData[NumberOfParameters] = {{"Temperature", TEMPERATURE_MIN , TEMPERATURE_MAX},
                                                   {"ChargeRate", CHARGERATE_MIN , CHARGERATE_MAX}};
 
 getBmsParamVal_funPtr getParamValue[NumberOfParameters] = {getBmsTemperatue , getBmsChargeRate};

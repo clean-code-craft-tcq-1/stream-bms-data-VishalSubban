@@ -22,12 +22,12 @@ enum BmsParameters_e{
     NumberOfParameters
 }
 
-struct BatteryParameters_s
+typedef struct BatteryParameters
 {
     char ParameterName[20];
     float minValue;
     float maxValue;
-};
+}BatParams_s;
 
 bool isStopRequestedByUser;
 
