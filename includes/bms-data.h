@@ -20,10 +20,9 @@ enum BmsParameters_e{
     Temperature = 0,
     ChargeRate,
     NumberOfParameters
-}
+};
 
-typedef struct BatteryParameters
-{
+typedef struct BatteryParameters{
     char ParameterName[20];
     float minValue;
     float maxValue;
