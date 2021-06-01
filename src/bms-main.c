@@ -2,6 +2,8 @@
 #include "bms-data.h"
 /************************************************************/
 
+bool isStopRequestedByUser = false;
+
 int main()
 {
     signal(SIGINT, sighandler);

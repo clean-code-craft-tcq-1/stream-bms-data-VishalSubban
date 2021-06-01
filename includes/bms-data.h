@@ -33,7 +33,7 @@ typedef struct BatteryParameters{
     float maxValue;
 }BatParams_s;
 
-bool isStopRequestedByUser;
+extern bool isStopRequestedByUser;
 
 /************************ Function Declaration **************************/
 void sighandler(int);
