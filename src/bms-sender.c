@@ -13,17 +13,21 @@ void BmsDataSendToConsole()
 {
     float BmsData[NumberOfParameters]; 
     int batteryParamIterater;
-	int counter = 0;
+    int count = 0;
 
-    do
+    //while(!isStopRequestedByUser)
+    while(count != 30)
     {
-		counter++;
-        isStopRequestedByUser = false;
+        count++;
         for (batteryParamIterater = 0 ; batteryParamIterater < NumberOfParameters; batteryParamIterater++)
         {
             BmsData[batteryParamIterater]= getParamValue[batteryParamIterater]();
         }
         BmsDataPrint(BmsData);
         sleep(SLEEP_TIME);
-    }while(!(counter == 30));
+        #ifdef UNIT_TEST
+        break;
+        #endif
+    }
+
 }
