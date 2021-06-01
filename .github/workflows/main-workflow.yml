@@ -14,7 +14,7 @@ jobs:
       run: sudo apt-get install -y gcovr
 
     - name: build for test
-      run: g++ -Iincludes -DUNIT_TEST -Wall -Wextra -fprofile-arcs -ftest-coverage -o testchecker ./test/bms-test.c
+      run: g++ -Iincludes -DUNIT_TEST -Wall -Wextra -fprofile-arcs -ftest-coverage -o testchecker ./test/*.c ./src/*.c
       
     - name: run
       run: ./testchecker
@@ -30,7 +30,7 @@ jobs:
         retention-days: 1
     
     - name: build for production
-      run: g++ -Iincludes -Wall -Wextra -o production ./src/bms-main.c ./src/bms-sender.c ./src/bms-exec.c 
+      run: g++ -Iincludes -Wall -Wextra -o production ./*.c 
       
     - name: run
       run: ./production
