@@ -28,5 +28,5 @@ void BmsDataPrint(float * BMSData)
 
 float BmsDataGenerator(float min, float max)
 {
-    return (rand() % (max - min + 1)) + min;
+    return ((float)rand() % (max - min + 1)) + min;
 }
