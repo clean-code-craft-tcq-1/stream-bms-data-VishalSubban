@@ -20,3 +20,8 @@ float getBmsChargeRate()
     retval = (rand() % (CHARGERATE_MAX - CHARGERATE_MIN + 1)) + CHARGERATE_MIN;
     return retval ;
 }
+
+void BmsDataPrint(float * BMSData)
+{
+    printf("%0.2f;%0.2f\n", BMSData[0], BMSData[1]);
+}

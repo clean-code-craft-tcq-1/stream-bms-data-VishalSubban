@@ -9,8 +9,8 @@
 
 int main()
 {
-	signal(SIGINT, sighandler);
-	
+    signal(SIGINT, sighandler);
+
     BmsDataSendToConsole();
-	return 0;
+    return 0;
 }
