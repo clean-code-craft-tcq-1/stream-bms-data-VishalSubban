@@ -17,6 +17,8 @@ bool isStopRequestedByUser = false;
 
 TEST_CASE("printed value is in range") {
     BmsDataSendToConsole();
-    REQUIRE((getBmsTemperatue() >= TEMPERATURE_MIN) && (getBmsTemperatue() <= TEMPERATURE_MAX));
-    REQUIRE((getBmsChargeRate() >= CHARGERATE_MIN) && (getBmsChargeRate() <= CHARGERATE_MAX));
+    REQUIRE((getBmsTemperatue() >= TEMPERATURE_MIN));
+    REQUIRE((getBmsTemperatue() <= TEMPERATURE_MAX));
+    REQUIRE((getBmsChargeRate() >= CHARGERATE_MIN));
+    REQUIRE((getBmsChargeRate() <= CHARGERATE_MAX));
 }
