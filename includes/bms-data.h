@@ -12,6 +12,8 @@
 #define CHARGERATE_MIN 0.0
 #define CHARGERATE_MAX 0.2
 
+#define SLEEP_TIME 1
+
 /************************ Variables **************************/
 enum BmsParameters_e{
     Temperature = 0,
@@ -26,7 +28,11 @@ struct BatteryParameters_s
     float maxValue;
 };
 
+bool isStopRequestedByUser;
+
 /************************ Function Declaration **************************/
+void sighandler(int);
+
 void BmsDataSendToConsole();
 
 float getBmsTemperatue();
@@ -35,6 +41,6 @@ float getBmsChargeRate();
 
 void BmsDataPrint(float * BMSData);
 
-float BmsDataGenerator(float min, float max);
+//float BmsDataGenerator(float min, float max);
 
-typedef float (*getBmsParamVal_funcPtr)();
+typedef float (*getBmsParamVal_funPtr)();
