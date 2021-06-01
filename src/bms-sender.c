@@ -14,7 +14,7 @@ void BmsDataSendToConsole()
     float BmsData[NumberOfParameters]; 
     int batteryParamIterater;
 
-    #ifdef UNIT_TEST
+    #ifndef UNIT_TEST
     int count = 0;
     while(count != 30)
     {
