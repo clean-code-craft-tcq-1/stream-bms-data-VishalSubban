@@ -13,12 +13,16 @@ void BmsDataSendToConsole()
 {
     float BmsData[NumberOfParameters]; 
     int batteryParamIterater;
-    int count = 0;
 
-    //while(!isStopRequestedByUser)
+    #ifdef UNIT_TEST
+    int count = 0;
     while(count != 30)
     {
         count++;
+    #else
+    while(!isStopRequestedByUser)
+    {
+    #endif
         for (batteryParamIterater = 0 ; batteryParamIterater < NumberOfParameters; batteryParamIterater++)
         {
             BmsData[batteryParamIterater]= getParamValue[batteryParamIterater]();
