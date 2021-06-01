@@ -46,6 +46,6 @@ float getBmsChargeRate();
 
 void BmsDataPrint(float * BMSData);
 
-//float BmsDataGenerator(float min, float max);
+float BmsDataGenerator(float min, float max);
 
 typedef float (*getBmsParamVal_funPtr)();
