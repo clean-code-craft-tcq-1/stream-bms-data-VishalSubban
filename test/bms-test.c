@@ -12,7 +12,7 @@ void TC_PrintRandomValue()
 int main()
 {
     TC_PrintRandomValue();
-    assert((getBmsTemperatue() >= TEMPERATURE_MIN) && (getBmsTemperatue() <= TEMPERATURE_MAX);
+    assert((getBmsTemperatue() >= TEMPERATURE_MIN) && (getBmsTemperatue() <= TEMPERATURE_MAX));
     assert((getBmsChargeRate() >= CHARGERATE_MIN) && (getBmsChargeRate() <= CHARGERATE_MAX));
     
 }
