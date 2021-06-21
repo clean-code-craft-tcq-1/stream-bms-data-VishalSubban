@@ -15,6 +15,6 @@ def formatInputStream(input_data):
   input_vals = input_data.split(';')
   list_temp = input_vals[0]
   list_soc = input_vals[1]
-    return list_temp,list_soc
+  return list_temp,list_soc
     
 getSenderInput()
