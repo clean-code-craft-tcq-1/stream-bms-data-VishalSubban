@@ -12,7 +12,7 @@ def calculateMin(data,parameter):
 def calculateMax(data,parameter):
     return max(data[parameter])
 
-def displayOutput(input_list):
+def Output_to_console(input_list):
     print('Max Temperature:', calculateMax(input_list,'temperature'))
     print('Min Temperature:', calculateMin(input_list,'temperature'))
     print('Max SOC:', calculateMax(input_list,'soc'))
@@ -25,7 +25,7 @@ def averageLastFive(input_list):
     length = len(input_list)
     if length !=0:
         for i in range(-1,-6,-1):
-            sum_of_Vals += input_lisy[i]
+            sum_of_Vals += input_list[i]
         return sum_of_Vals/5
     else:
         return "Length of the list is Zero"
