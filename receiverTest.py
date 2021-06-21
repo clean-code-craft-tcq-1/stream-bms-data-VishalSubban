@@ -21,4 +21,5 @@ class ReceiverTest(unittest.TestCase):
     def testAvgTempSOC(self):
         self.assertTrue(receiver_calculate.averageLastFive([93,90,94,57,63,69,70,51,85,96]) == 74.2)
         
-if __name__ == 
+if __name__ == '__main__':
+  unittest.main()
